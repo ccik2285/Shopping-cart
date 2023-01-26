@@ -9,27 +9,17 @@
 </head>
 <script src="/js/jquery-3.6.3.min.js"></script>
 <script>
+
 $( document ).ready( function() {
-	$('#addProductBtn').click(function() {
-		let name = $('#name').val();
-		let price = $('#price').val();
+
 	
-		$.ajax({
-			url: "/product",
-			type: "post",
-			accept: "application/json",
-			contentType: "application/json; charset=utf-8",
-			data: JSON.stringify({'name': name, 'price': price}),
-			dataType: "json",	
-			success: function(data) {
-				
-			}
-		});
-	});
+
+
 });
 </script>
 <body>
 	<div class="container">
+		<form action="/main" method="post">
 	    <div class="py-5 text-center">
 	        <h2>상품 등록 폼</h2>
 	    </div>
@@ -55,6 +45,7 @@ $( document ).ready( function() {
                 </button>
             </div>
         </div>
+        </form>
 	</div>
 </body>
 </html>
